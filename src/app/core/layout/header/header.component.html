@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" class="layout-toolbar mat-elevation-z8">
+    <button mat-icon-button (click)="sidebar.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div>
+      <a [routerLink]="['/']" routerLinkActive="">
+      <!-- <img
+        src="../../assets/img/logo_dark.svg"
+        class="is-desktop"
+      />
+      <img
+        src="../../assets/img/logo_symbol.svg"
+        class="is-mobile"
+      /> -->
+    </a>
+    </div>
+    <div class="top-right-menu">
+      <mat-form-field *ngIf="searchBar">
+        <input matInput />
+      </mat-form-field>
+      <button mat-icon-button [matMenuTriggerFor]="settingsMenu">
+        <mat-icon>settings</mat-icon>
+      </button>
+      <mat-menu #settingsMenu="matMenu">
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Sair</span>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>

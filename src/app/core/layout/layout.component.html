@@ -1,2 +1,21 @@
-<p>layout works!</p>
-<router-outlet></router-outlet>
+<div class="layout-container" [class.layout-is-mobile]="mobileQuery.matches">
+  <app-header [sidebar]="sidebar"></app-header>
+  <mat-sidenav-container
+    class="layout-sidenav-container"
+    [style.marginTop.px]="mobileQuery.matches ? 50 : 0"
+  >
+    <mat-sidenav
+      #sidebar
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="50"
+      class="sidenav"
+      [opened]="mobileQuery.matches ? 'false' : 'true'"
+    >
+      <app-sidemenu></app-sidemenu>
+    </mat-sidenav>
+    <mat-sidenav-content class="layout-background">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

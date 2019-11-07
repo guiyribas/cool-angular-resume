@@ -1,0 +1,48 @@
+.layout-is-mobile .layout-toolbar {
+  display: flex;
+  position: fixed;
+  z-index: 2;
+}
+
+.layout-toolbar {
+  height: 50px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// TOOLBAR
+.top-right-menu {
+  margin-left: auto;
+  // float: right;
+}
+
+.toolbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+}
+
+// SEARCH
+
+// LOGO
+
+@media (min-width: 401px) {
+  img {
+    max-width: 150px;
+    padding-top: 10px;
+  }
+  .is-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  img {
+    max-height: 34px;
+    padding-top: 10px;
+  }
+  .is-desktop {
+    display: none;
+  }
+}

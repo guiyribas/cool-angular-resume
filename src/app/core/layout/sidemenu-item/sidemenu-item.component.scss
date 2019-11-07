@@ -1,0 +1,39 @@
+mat-list-icon {
+  padding-left: 6px;
+}
+mat-chip {
+  padding: 1px 7px;
+}
+
+.sidenav-dropdown-indicator {
+  transition: transform 0.25s;
+  &.indicateOpen {
+    transform: rotate(180deg);
+  }
+}
+mat-nav-list {
+  overflow: hidden;
+  padding-top: 0px;
+}
+
+.mat-nav-list .mat-list-item .mat-list-item-content {
+  padding-left: 6px;
+}
+.mat-nav-list .mat-list-item .mat-list-text {
+  padding-left: 6px !important;
+}
+
+.primary {
+  transition: max-height 0.4s cubic-bezier(0.35, 0, 0.25, 1);
+  padding-top: 0px;
+  background: red;
+}
+.secondaryMenu {
+  background: red;
+  transition: max-height 0.4s cubic-bezier(0.35, 0, 0.25, 1);
+  padding-top: 0px;
+}
+
+.mat-nav-list .mat-list-item {
+  font-size: 14px;
+}
